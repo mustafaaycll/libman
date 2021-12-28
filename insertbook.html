@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>libman - Library Management System</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>libman</h1>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="insertrecord.html">Add/Remove Borrow Record</a></li>
+                    <li><a href="insertbook.html">Add/Remove Book</a></li>
+                    <li><a href="insertuser.html">Add/Remove User</a></li>
+                    <li><a href="getitems.html">List Items</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div align="center">
+            <br>
+            <form action="insertbook.php" method="POST">
+                <input type="text" name="bname" placeholder="Book Name"><br><br>
+                <input type="text" name="aname" placeholder="Author Name"><br><br>
+                <input type="number" name="byear" placeholder="Year"><br><br>
+                <input type="text" name="publisher" placeholder="Publisher"><br><br>
+                <input type="text" name="blockname" placeholder="Block Name"><br><br>
+                <input type="number" name="sno" placeholder="Shelf No."><br><br>
+
+                <select name="exist">
+                    <option value=1>It is available to be borrowed</option>
+                    <option value=0>It is NOT available to be borrowed</option>
+                </select> <br><br>
+                <button>ADD</button>
+            </form>
+            <form action="admin.php" method="POST"><br>
+                <button>
+                    DELETE
+                </button>
+            </form>
+        </div>
+    </body>
+</html>
