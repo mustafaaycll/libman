@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>libman - Library Management System</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <h1>libman</h1>
-            <nav>
-                <ul class="nav__links">
-                    <li><a href="insertrecord.html">Add Borrow Record</a></li>
-                    <li><a href="removerecord.html">Remove Borrow Record</a></li>
-                    <li><a href="insertbook.html">Add Book</a></li>
-                    <li><a href="removebook.html">Remove Book</a></li>
-                    <li><a href="insertuser.html">Add/Remove User</a></li>
-                    <li><a href="getitems.html">List Items</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <div align="center">
-            <br>
-            <form action="insertrecord.php" method="POST">
-                <input type="text" name="bid" placeholder="Location of the book (XXYY = XX: Block name, YY:Shelf No.)"><br><br>
-                <input type="text" name="email" placeholder="E-Mail"><br><br>
-                <h1>Borrow Date:</h1><br><br>
-                <input type="date" name="bdate" placeholder="Borrow Date"><br><br><br>
-                <h1>Due Date:</h1><br><br>
-                <input type="date" name="duedate" placeholder="Return Date"><br><br><br><br>
-                <button>ADD</button>
-            </form>
-            <form action="admin.php" method="POST"><br>
-                <button>
-                    DELETE
-                </button>
-            </form>
-        </div>
-    </body>
+<head>
+    <title>libman - Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>libman</h1>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="insertrecord.html">Add Borrow Record</a></li>
+                <li><a href="removerecord.php">Remove Borrow Record</a></li>
+                <li><a href="insertbook.html">Add Book</a></li>
+                <li><a href="removebook.html">Remove Book</a></li>
+                <li><a href="insertuser.html">Add/Remove User</a></li>
+                <li><a href="getitems.html">List Items</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div align="center">
+        <br>
+        <form action="insertrecord.php" method="POST">
+            <input type="text" name="bid"
+                placeholder="Location of the book (XXYY = XX: Block name, YY:Shelf No.)"><br><br>
+            <input type="text" name="email" placeholder="E-Mail"><br><br>
+            <h1>Borrow Date:</h1><br><br>
+            <input type="date" name="bdate" placeholder="Borrow Date"><br><br><br>
+            <h1>Due Date:</h1><br><br>
+            <input type="date" name="duedate" placeholder="Return Date"><br><br><br><br>
+            <button>ADD</button>
+        </form>
+    </div>
+</body>
+
 </html>
