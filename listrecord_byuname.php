@@ -39,6 +39,7 @@
             background-color: transparent;
             color: white;
         }
+
         #customers2 {
             font-family: Arial, Helvetica, sans-serif;
             border-collapse: collapse;
@@ -87,7 +88,7 @@
                 <li><a href="insertbook.html">Add Book</a></li>
                 <li><a href="insertuser.html">Add User</a></li>
                 <li><a href="removeuser.php">Remove User</a></li>
-                <li><a href="getitems.php">List Items</a></li>
+                <li><a href="getitems.php">Explore Database</a></li>
             </ul>
         </nav>
     </header>
@@ -250,7 +251,6 @@
                             }
                         }
                         echo "<tr>" . "<td>" . $bid . "</td>" . "<td>" . $bname . "</td>" . "<td>" . $aname . "</td>" . "<td>" . $publisher . "</td>" . "<td>" . $byear . "</td>" . "<td>" . $bdate . "</td>" . "<td>" . $duedate . "</td>" . "<td>" . $uname2 . "</td>" . "</tr>";
-
                     }
                 }
             }

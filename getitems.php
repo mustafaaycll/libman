@@ -11,12 +11,12 @@
         <h1>libman</h1>
         <nav>
             <ul class="nav__links">
-            <li><a href="insertrecord.html">Add Borrow Record</a></li>
+                <li><a href="insertrecord.html">Add Borrow Record</a></li>
                 <li><a href="removerecord.php">Remove Borrow Record</a></li>
                 <li><a href="insertbook.html">Add Book</a></li>
                 <li><a href="insertuser.html">Add User</a></li>
                 <li><a href="removeuser.php">Remove User</a></li>
-                <li><a href="getitems.php">List Items</a></li>
+                <li><a href="getitems.php">Explore Database</a></li>
             </ul>
         </nav>
     </header>
@@ -78,13 +78,13 @@
             if (mysqli_num_rows($result_checker) == 0) {
                 echo '<script>alert("The book does not exist in our database, please make sure that the book name is correct")</script>';
             } else {
-                header('Location: index.html');
+                header("Location: listbooks_byname.php?icerik=$bname");
             }
         }
 
         if (isset($_REQUEST['anamesearch'])) {
             $aname = $_REQUEST['anamesearch'];
-            
+
             $author_sql = "SELECT * FROM writers WHERE aname = '$aname'";
             $author_result = mysqli_query($db, $author_sql);
             if (mysqli_num_rows($author_result) == 0) {
@@ -99,8 +99,8 @@
             $user_sql = "SELECT * FROM users WHERE uname = '$uname'";
             $user_result = mysqli_query($db, $user_sql);
             $email = "";
-            
-            while ($user_row = mysqli_fetch_assoc($user_result)){
+
+            while ($user_row = mysqli_fetch_assoc($user_result)) {
                 $email = $user_row['email'];
             }
 

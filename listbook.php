@@ -44,7 +44,7 @@
                 <li><a href="insertbook.html">Add Book</a></li>
                 <li><a href="insertuser.html">Add User</a></li>
                 <li><a href="removeuser.php">Remove User</a></li>
-                <li><a href="getitems.php">List Items</a></li>
+                <li><a href="getitems.php">Explore Database</a></li>
             </ul>
         </nav>
     </header>
