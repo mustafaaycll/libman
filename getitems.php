@@ -96,18 +96,22 @@
 
         if (isset($_REQUEST['recordsearch'])) {
             $uname = $_REQUEST['recordsearch'];
+            $user_sql = "SELECT * FROM users WHERE uname = '$uname'";
+            $user_result = mysqli_query($db, $user_sql);
+            $email = "";
             
-            $record_sql = "SELECT * FROM writers WHERE aname = '$aname'";
-            $author_result = mysqli_query($db, $author_sql);
-            if (mysqli_num_rows($author_result) == 0) {
-                echo '<script>alert("The author does not exist in our database, please make sure that the author name is correct")</script>';
+            while ($user_row = mysqli_fetch_assoc($user_result)){
+                $email = $user_row['email'];
+            }
+
+            $record_sql = "SELECT * FROM who_is WHERE email = '$email'";
+            $record_result = mysqli_query($db, $record_sql);
+            if (mysqli_num_rows($record_result) == 0) {
+                echo "<script>alert('There is no record linked to $uname')</script>";
             } else {
-                header("Location: listauthors_byname.php");
+                header("Location: listrecord_byuname.php?uname=$uname");
             }
         }
-
-
-
         ?>
     </div>
 </body>

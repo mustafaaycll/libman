@@ -17,6 +17,14 @@ p, h1, li, a, button {
     text-decoration: none;
 }
 
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #b2b7b9;
+    text-decoration: none;
+}
+
 header {
     display: flex;
     justify-content: space-evenly;
