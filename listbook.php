@@ -42,9 +42,9 @@
                 <li><a href="insertrecord.html">Add Borrow Record</a></li>
                 <li><a href="removerecord.php">Remove Borrow Record</a></li>
                 <li><a href="insertbook.html">Add Book</a></li>
-                <li><a href="removebook.html">Remove Book</a></li>
-                <li><a href="insertuser.html">Add/Remove User</a></li>
-                <li><a href="getitems.html">List Items</a></li>
+                <li><a href="insertuser.html">Add User</a></li>
+                <li><a href="removeuser.php">Remove User</a></li>
+                <li><a href="getitems.php">List Items</a></li>
             </ul>
         </nav>
     </header>
