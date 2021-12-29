@@ -32,7 +32,7 @@ if (isset($_POST['bid'])      and
                 
 
                 if (mysqli_num_rows($result_book) != 0 and $exist==1 and mysqli_num_rows($result_user) != 0){
-                    $sql_whois = "INSERT INTO who_is (bdate, duedate, email) VALUES ('$btime', '$duetime', '$email')";
+                    $sql_whois = "INSERT INTO who_is (bid, bdate, duedate, email) VALUES (UPPER('$bid'),'$btime', '$duetime', UPPER('$email'))";
                     $result_whois = mysqli_query($db, $sql_whois);
                     if ( false===$result_whois ) {
                         printf("error: %s\n", mysqli_error($db));
@@ -48,7 +48,7 @@ if (isset($_POST['bid'])      and
                         $record_id = $row2['AUTO_INCREMENT'];
                     }
 
-                    $sql_borrow = "INSERT INTO borrowed (bid, record_id) VALUES ('$bid', $record_id-1)";
+                    $sql_borrow = "INSERT INTO borrowed (bid, record_id) VALUES (UPPER('$bid'), $record_id-1)";
                     $result_borrow = mysqli_query($db, $sql_borrow);
                     if ( false===$result_borrow ) {
                         printf("error: %s\n", mysqli_error($db));
