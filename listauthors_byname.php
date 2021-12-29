@@ -17,11 +17,11 @@
         }
 
         #customers tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: transparent;
         }
 
         #customers tr:hover {
-            background-color: #ddd;
+            background-color: black;
         }
 
         #customers th {
@@ -29,6 +29,13 @@
             padding-bottom: 12px;
             text-align: left;
             background-color: #04AA6D;
+            color: white;
+        }
+        #customers td {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: transparent;
             color: white;
         }
     </style>
@@ -120,7 +127,7 @@
                                 }
                             }
                         }
-                        echo "<tr>" . "<th>" . $bid . "</th>" . "<th>" . $bname . "</th>" . "<th>" . $publisher . "</th>" . "<th>" . $byear . "</th>" . "<th>" . $date . "</th>" . "<th>" . $name . "</th>" . "<th>" . $email . "</th>" . "</tr>";
+                        echo "<tr>" . "<td>" . $bid . "</td>" . "<td>" . $bname . "</td>" . "<td>" . $publisher . "</td>" . "<td>" . $byear . "</td>" . "<td>" . $date . "</td>" . "<td>" . $name . "</td>" . "<td>" . $email . "</td>" . "</tr>";
                     }
                 }
             }
