@@ -16,7 +16,7 @@
                 <li><a href="insertbook.html">Add Book</a></li>
                 <li><a href="insertuser.html">Add User</a></li>
                 <li><a href="removeuser.php">Remove User</a></li>
-                <li><a href="getitems.php">List Items</a></li>
+                <li><a href="getitems.html">List Items</a></li>
             </ul>
         </nav>
     </header>
@@ -24,6 +24,22 @@
     <br>
     <br>
     <div align="center">
+        <br>
+        <form action="getitems.php" method="POST">
+            <h1>Search Books by Book Name: <br><br>
+            <input type="text" name="bname" placeholder="Book Name"><br><br>
+            <button>SEARCH</button>
+            <br>
+            <br>
+            <h1>Search Books by Author Name: <br><br>
+            <input type="text" name="aname" placeholder="Author Name"><br><br>
+            <button>SEARCH</button>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+
         <a href="listbook.php">
             <button>
                 List Books
