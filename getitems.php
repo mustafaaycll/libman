@@ -46,25 +46,7 @@
                 <input type="text" name="recordsearch" placeholder="Username"><br><br>
                 <button>SEARCH RECORD BY USERNAME</button>
         </form>
-        <br>
-        <br>
-        <br>
-        <br>
-        <a href="listbook.php">
-            <button>
-                List All Books
-            </button>
-        </a>
-        <a href="listwriters.php">
-            <button>
-                List All Authors
-            </button>
-        </a>
-        <a href="listrecords.php">
-            <button>
-                List All Records
-            </button>
-        </a>
+
 
         <?php
 
@@ -113,6 +95,22 @@
             }
         }
         ?>
+    </div>
+    <div align="center">
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="listbook.php">
+            <button>
+                List All Books
+            </button>
+        </a>
+        <a href="listrecords.php">
+            <button>
+                List All Records
+            </button>
+        </a>
     </div>
 </body>
 
