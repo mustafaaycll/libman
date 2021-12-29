@@ -65,7 +65,7 @@
         if (isset($_GET['bname'])) {
             $bname = $_GET['bname'];
 
-            echo "<h1><br><br>Informatıons about book named '$bname':</h1><br>";
+            echo "<h1><br><br>Informations about book named '$bname':</h1><br>";
             echo '<table id="customers"><br><tr>
                     <th>BID</th>
                     <th>BOOK NAME</th>

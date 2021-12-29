@@ -133,7 +133,7 @@
             if (mysqli_num_rows($result_checker) == 0) {
                 echo '<script>alert("The book does not exist in our database, please make sure that the book name is correct")</script>';
             } else {
-                header("Location: listbooks_byname.php?icerik=$bname");
+                header("Location: listbooks_byname.php?bname=$bname");
             }
         }
 
